@@ -1,21 +1,251 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>JET Wedding</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//fonts.googleapis.com/css?family=Monsieur+La+Doulaise"
-    />
-    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emily & Joe Terlecky</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="splashPage">
-      <div class="splashPageText">
-        <h3>Joe and Emily Terlecky</h3>
-        <p>05-Sept-2025</p>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">Emily & Joe</div>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#registry">Registry</a></li>
+          </ul>
+          <div class="menu-toggle">☰</div>
+        </nav>
       </div>
-    </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Emily & Joe</h1>
+        <p>We're getting married on October 5, 2025</p>
+        <div class="countdown">
+          <div class="countdown-item">
+            <span id="days">84</span>
+            Days
+          </div>
+          <div class="countdown-item">
+            <span id="hours">12</span>
+            Hours
+          </div>
+          <div class="countdown-item">
+            <span id="minutes">43</span>
+            Minutes
+          </div>
+          <div class="countdown-item">
+            <span id="seconds">22</span>
+            Seconds
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">Our Story</h2>
+        <div class="story-container">
+          <div class="story-text">
+            <h3>How We Met</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              euismod, nisi vel consectetur interdum, nisl nisi consectetur
+              purus, eget malesuada erat eros vel felis. Morbi ac turpis
+              eleifend, commodo nibh in, porttitor eros.
+            </p>
+            <p>
+              Praesent auctor velit sit amet libero fermentum, vel finibus dui
+              sagittis. Praesent efficitur nec urna in aliquam. Praesent non
+              pulvinar mi. Vestibulum ac augue sem.
+            </p>
+          </div>
+          <div class="story-image">
+            <div class="image-placeholder"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section id="details" class="alt-bg">
+      <div class="container">
+        <h2 class="section-title">Wedding Details</h2>
+        <div class="event-details">
+          <div class="event-card">
+            <div class="event-card-img"></div>
+            <div class="event-card-content">
+              <h3>Ceremony</h3>
+              <p><strong>Date:</strong> June 15, 2025</p>
+              <p><strong>Time:</strong> 2:00 PM</p>
+              <p>
+                <strong>Location:</strong> St. Mary's Chapel<br />123 Wedding
+                Lane<br />Cityville, ST 12345
+              </p>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event-card-img"></div>
+            <div class="event-card-content">
+              <h3>Reception</h3>
+              <p><strong>Date:</strong> June 15, 2025</p>
+              <p><strong>Time:</strong> 5:00 PM</p>
+              <p>
+                <strong>Location:</strong> Grand Ballroom<br />456 Celebration
+                Ave<br />Cityville, ST 12345
+              </p>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event-card-img"></div>
+            <div class="event-card-content">
+              <h3>Accommodations</h3>
+              <p><strong>Hotel:</strong> Cityville Grand Hotel</p>
+              <p>
+                <strong>Address:</strong> 789 Comfort Road<br />Cityville, ST
+                12345
+              </p>
+              <p><strong>Phone:</strong> (555) 123-4567</p>
+              <p>Group rate available under "Emma & James Wedding"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp">
+      <div class="container">
+        <h2 class="section-title">RSVP</h2>
+        <div class="rsvp-form">
+          <form id="rsvpForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="attending">Will you be attending?</label>
+              <select id="attending" name="attending" required>
+                <option value="">Please select</option>
+                <option value="yes">Joyfully Accept</option>
+                <option value="no">Regretfully Decline</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="guests">Number of Guests (including yourself)</label>
+              <input
+                type="number"
+                id="guests"
+                name="guests"
+                min="1"
+                max="5"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="meal">Meal Preference</label>
+              <select id="meal" name="meal" required>
+                <option value="">Please select</option>
+                <option value="chicken">Chicken</option>
+                <option value="beef">Beef</option>
+                <option value="fish">Fish</option>
+                <option value="vegetarian">Vegetarian</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message to the Couple (Optional)</label>
+              <textarea id="message" name="message"></textarea>
+            </div>
+            <button type="submit" class="btn">Submit RSVP</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="alt-bg">
+      <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery">
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registry Section -->
+    <section id="registry">
+      <div class="container">
+        <h2 class="section-title">Registry</h2>
+        <div class="registry-info">
+          <p>
+            Your presence at our wedding is the greatest gift of all. However,
+            if you wish to help us celebrate with a gift, we've registered at
+            the following places:
+          </p>
+          <div class="registry-items">
+            <div class="registry-item">
+              <div class="registry-logo">
+                <div class="registry-name">Registry 1</div>
+              </div>
+              <p>Store Name</p>
+            </div>
+            <div class="registry-item">
+              <div class="registry-logo">
+                <div class="registry-name">Registry 2</div>
+              </div>
+              <p>Store Name</p>
+            </div>
+            <div class="registry-item">
+              <div class="registry-logo">
+                <div class="registry-name">Registry 3</div>
+              </div>
+              <p>Store Name</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <h3>Emma & James</h3>
+          <p>June 15, 2025</p>
+        </div>
+        <div class="social-links">
+          <a href="#">♥</a>
+          <a href="#">♥</a>
+          <a href="#">♥</a>
+        </div>
+        <p>&copy; 2025 Emma & James Wedding</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript file link -->
+    <script src="./js/script.js"></script>
   </body>
 </html>
